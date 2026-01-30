@@ -26,7 +26,7 @@ export default function Header() {
               className="h-10 w-10"
             />
             <span className="hidden text-xl font-bold text-foreground sm:inline">
-              Finvise AI
+              FinVise AI
             </span>
           </Link>
 
@@ -61,6 +61,12 @@ export default function Header() {
               className="text-sm font-medium text-foreground/70 transition-colors hover:text-accent"
             >
               Contact
+            </Link>
+            <Link
+              href="/preview"
+              className="text-sm font-medium text-foreground/70 transition-colors hover:text-accent"
+            >
+              Preview
             </Link>
           </div>
 

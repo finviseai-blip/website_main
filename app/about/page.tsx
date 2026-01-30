@@ -14,7 +14,7 @@ export default function About() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: 'url(\image3.png)',
+              backgroundImage: 'url(/image3.png)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}

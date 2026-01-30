@@ -9,7 +9,7 @@ export default function Domains() {
       icon: Brain,
       title: 'AI for Financial Intelligence',
       description:
-        'Advanced machine learning and deep learning systems specifically designed for financial markets. We create AI models that analyze market data, predict trends, and identify trading opportunities in real-time.',
+        'Advanced machine learning and deep learning systems specifically designed for financial markets. We create AI models that analyze market data, predict trends, and identify investing opportunities in real-time.',
       highlights: [
         'Market Pattern Recognition',
         'Predictive Trading Models',
@@ -23,7 +23,7 @@ export default function Domains() {
       icon: Code,
       title: 'FinTech Application Development',
       description:
-        'Building next-generation financial applications with lightning-fast performance and intuitive interfaces. Our apps enable seamless trading, portfolio management, and financial analytics for modern investors.',
+        'Building next-generation financial applications with lightning-fast performance and intuitive interfaces. Our apps enable seamless portfolio management, and financial analytics for modern investors.',
       highlights: [
         'Trading Platforms',
         'Portfolio Dashboards',
@@ -37,7 +37,7 @@ export default function Domains() {
       icon: Cloud,
       title: 'Secure FinTech Infrastructure',
       description:
-        'Enterprise-grade cloud and DevOps solutions that power secure, high-performance financial systems. We ensure 99.99% uptime with compliance-first architecture for regulatory requirements.',
+        'Enterprise-grade cloud and DevOps solutions that power secure, high-performance financial systems. We ensure uptime with compliance-first architecture for regulatory requirements.',
       highlights: [
         'Cloud Architecture (AWS/GCP)',
         'Kubernetes Orchestration',
@@ -51,7 +51,7 @@ export default function Domains() {
       icon: BarChart3,
       title: 'Financial Data & Analytics',
       description:
-        'Transform raw financial data into powerful insights. We build analytics platforms that help traders, investors, and institutions make data-driven decisions with confidence.',
+        'Transform raw financial data into powerful insights. We build analytics platforms that help investors, and institutions make data-driven decisions with confidence.',
       highlights: [
         'Real-Time Analytics',
         'Historical Data Processing',
@@ -133,7 +133,7 @@ export default function Domains() {
         <section className="border-t border-border bg-secondary px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <h2 className="mb-12 text-center text-4xl font-bold text-foreground">
-              Why Choose Finvise AI
+              Why Choose FinVise AI
             </h2>
             <div className="grid gap-8 md:grid-cols-3">
               {[

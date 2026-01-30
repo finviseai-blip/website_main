@@ -50,7 +50,7 @@ export default function Home() {
               </h1>
 
               <p className="mb-10 text-lg text-foreground/90 leading-relaxed max-w-xl drop-shadow-md">
-                Finvise AI leverages cutting-edge artificial intelligence to transform financial technology. We build intelligent solutions that empower businesses to make smarter decisions, faster.
+                FinVise AI leverages cutting-edge artificial intelligence to transform financial technology. We build intelligent solutions that empower businesses to make smarter decisions, faster.
               </p>
 
               <div className="flex flex-col gap-4 sm:flex-row">
@@ -171,7 +171,7 @@ export default function Home() {
               {/* Right Content */}
               <div className="order-1 lg:order-2 animate-float-up" style={{ animationDelay: '0.1s' }}>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                  Why Choose <span className="text-accent">Finvise?</span>
+                  Why Choose <span className="text-accent">FinVise?</span>
                 </h2>
                 <div className="space-y-4">
                   {[
@@ -198,7 +198,7 @@ export default function Home() {
           <div className="mx-auto max-w-4xl">
             <div className="bg-gradient-to-br from-accent/20 to-accent/5 border-3 border-accent/60 hover:border-accent rounded-2xl p-12 text-center shadow-xl hover:shadow-2xl hover:shadow-accent/40 transition-smooth group animate-float-up">
               <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-white group-hover:text-accent transition-smooth">
-                Join the <span className="text-accent">Finvise Team</span>
+                Join the <span className="text-accent">FinVise Team</span>
               </h2>
               <p className="text-xl text-gray-300 group-hover:text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto transition-smooth">
                 We're building the future of financial technology. Join us in creating intelligent, ethical, and accessible financial tools. Explore opportunities in Marketing, AI Development, App Development, and DevOps.
