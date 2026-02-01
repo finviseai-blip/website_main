@@ -1,6 +1,16 @@
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { PlayCircle, ImageIcon, Clock } from 'lucide-react';
+import Image from "next/image";
+const screenshots = [
+  "/images/ss1.jpeg",
+  "/images/ss2.jpeg",
+  "/images/ss3.jpeg",
+  "/images/ss4.jpeg",
+  "/images/ss5.jpeg",
+  "/images/ss6.jpeg",
+];
+
 
 export default function Preview() {
   return (
@@ -80,24 +90,22 @@ export default function Preview() {
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {Array.from({ length: 6 }).map((_, idx) => (
-                <div
-                  key={idx}
-                  className="relative h-64 rounded-lg border-2 border-accent/40 overflow-hidden group"
-                >
-                  {/* blurred mock */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-accent/5 blur-md" />
+  {screenshots.map((src, idx) => (
+    <div
+      key={idx}
+      className="relative rounded-lg border-2 border-accent/40 overflow-hidden"
+    >
+      <Image
+        src={src}
+        alt={`Screenshot ${idx + 1}`}
+        width={500}
+        height={300}
+        className="w-full h-64 object-cover"
+      />
+    </div>
+  ))}
+</div>
 
-                  {/* overlay */}
-                  <div className="absolute inset-0 backdrop-blur-sm bg-black/50 flex flex-col items-center justify-center text-center">
-                    <ImageIcon className="text-accent mb-3" size={36} />
-                    <p className="text-white font-semibold">
-                      Screenshot Coming Soon
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
