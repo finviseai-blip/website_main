@@ -34,42 +34,69 @@ export default function About() {
           </div>
         </section>
 
-        {/* Our Story Section */}
-        <section className="bg-black px-4 py-24 sm:px-6 lg:px-8 border-b-2 border-accent/40">
-          <div className="mx-auto max-w-6xl">
-            <h2 className="mb-16 text-5xl md:text-6xl font-bold text-white animate-float-up">Our Story</h2>
-            <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-start">
-              {/* Left Content */}
-              <div className="space-y-8 animate-float-up">
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light hover:text-gray-100 transition-smooth">
-                  Finvise was born from a simple belief: everyone deserves access to powerful financial intelligence, not just the wealthy or the experts.
-                </p>
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light hover:text-gray-100 transition-smooth">
-                  We recognized that people struggle with money not because they lack intelligence, but because financial systems are unnecessarily complex. That's why we're building a platform that uses AI to cut through the noise.
-                </p>
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light hover:text-gray-100 transition-smooth">
-                  Powered by FinAI, our advanced AI engine, Finvise focuses on education, analysis, and clarity — not speculation. We're here to help individuals and businesses understand their finances deeply, plan responsibly, and grow sustainably.
-                </p>
-              </div>
+{/* Our Story Section */}
+<section className="border-b-2 border-accent/40 px-4 py-20 sm:px-6 lg:px-8">
+  <div className="mx-auto max-w-7xl">
 
-              {/* Right Statistics */}
-              <div className="grid grid-cols-2 gap-8 lg:gap-10 animate-float-up" style={{ animationDelay: '0.1s' }}>
-                {[
-                  { icon: '🌍', label: 'IN', text: 'Made in India' },
-                  { icon: '🤖', label: 'AI', text: 'Powered by FinAI' },
-                  { icon: '🌐', label: 'FOR THE WORLD', text: 'For the World' },
-                  { icon: '⏰', label: '24/7', text: 'Always Available' },
-                ].map((item, idx) => (
-                  <div key={idx} className="flex flex-col items-center justify-center p-6 rounded-lg border-2 border-accent/40 bg-gradient-to-br from-accent/10 to-accent/5 hover:border-accent hover:shadow-xl hover:shadow-accent/30 transition-smooth group cursor-pointer" style={{ animationDelay: `${idx * 0.05}s` }}>
-                    <div className="text-5xl md:text-6xl mb-4 group-hover:scale-125 transition-smooth">{item.icon}</div>
-                    <div className="text-2xl md:text-3xl font-bold text-accent mb-3 text-center group-hover:text-white transition-smooth">{item.label}</div>
-                    <p className="text-gray-300 group-hover:text-gray-100 text-sm md:text-base text-center leading-snug transition-smooth">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+    <div className="grid lg:grid-cols-2 gap-16 items-start">
+
+      {/* LEFT: TEXT */}
+      <div className="max-w-xl">
+        <h2 className="mb-6 text-4xl md:text-5xl font-bold text-white">
+          Our Story
+        </h2>
+
+        <div className="space-y-5">
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+            Finvise was born from a simple belief: everyone deserves access to
+            powerful financial intelligence, not just the wealthy or the experts.
+          </p>
+
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+            We recognized that people struggle with money not because they lack
+            intelligence, but because financial systems are unnecessarily complex.
+            That’s why we’re building a platform that uses AI to cut through the noise.
+          </p>
+
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+            Powered by FinAI, our advanced AI engine, Finvise focuses on education,
+            analysis, and clarity — not speculation. We help individuals and businesses
+            understand their finances deeply, plan responsibly, and grow sustainably.
+          </p>
+        </div>
+      </div>
+
+      {/* RIGHT: IMAGE */}
+      {/* "relative   lg:h-full rounded-lg overflow-hidden border-2 
+      border-accent/50 hover:border-accent shadow-lg hover:shadow-2xl
+       hover:shadow-accent/30 transition-smooth
+
+       group animate-float-up" style={{ animationDelay: '0.1s' }} */}
+       
+<div
+        className="relative w-full max-w-lg ml-auto rounded-lg overflow-hidden
+                   border-2 border-accent/50 hover:border-accent
+                   shadow-lg hover:shadow-2xl hover:shadow-accent/30
+                   transition-smooth group animate-float-up"
+        style={{ animationDelay: "0.1s" }}
+      >
+        <div className="relative aspect-[4/5]">
+
+          <Image
+            src="/byin.jpg"
+            alt="Finvise vision"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
         {/* Hero */}
         <section className="border-b-2 border-accent/40 px-4 py-20 sm:px-6 lg:px-8">
@@ -201,7 +228,7 @@ export default function About() {
                       description: 'Advanced algorithms that learn market patterns and execute optimal trading strategies.',
                     },
                     {
-                      title: 'Real-Time Market Analytics',
+                      title: 'Market Analytics',
                       description: 'Deep financial insights powered by machine learning and predictive models.',
                     },
                     {

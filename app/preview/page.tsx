@@ -1,7 +1,10 @@
+ "use client";
+
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { PlayCircle, ImageIcon, Clock } from 'lucide-react';
 import Image from "next/image";
+import { useState } from "react";
 const screenshots = [
   "/images/ss1.jpeg",
   "/images/ss2.jpeg",
@@ -49,65 +52,86 @@ export default function Preview() {
           </div>
         </section>
 
-        {/* Video Preview Placeholder */}
-        <section className="px-6 py-24 border-b-2 border-accent/40">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-12 animate-float-up">
-              Demo Walkthrough
-            </h2>
 
-            <div className="relative rounded-xl border-2 border-accent/40 bg-secondary h-[450px] overflow-hidden group">
-              
-              {/* Blur Layer */}
-              <div className="absolute inset-0 backdrop-blur-md bg-black/40 z-10" />
 
-              {/* Content */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-20">
-                <PlayCircle size={64} className="text-accent mb-4 animate-pulse" />
-                <p className="text-2xl font-semibold text-white">
-                  Demo Video Coming Soon
-                </p>
-                <p className="text-gray-400 mt-2">
-                  Interactive product tour will be available here
-                </p>
-              </div>
+{/* Video Preview Section */}
+<section className="px-6 py-24 border-b-2 border-accent/40">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl font-bold mb-12 animate-float-up">
+      Demo Walkthrough
+    </h2>
 
-              {/* Fake blurred background grid */}
-              <div className="grid grid-cols-3 gap-4 p-8 blur-md opacity-40">
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <div key={i} className="h-32 bg-accent/30 rounded-lg" />
-                ))}
-              </div>
-            </div>
+    <div className="flex justify-center">
+      {/* Phone Container */}
+      <div className="relative w-full max-w-sm rounded-2xl border-2 border-accent/40 bg-black p-4 shadow-xl">
+
+        {/* 9:16 Mobile Video Frame */}
+        <div className="relative aspect-[9/16] overflow-hidden rounded-xl bg-secondary">
+
+          {/* ▶️ Video (loads after click) */}
+          <video
+            src="/demo.mp4"   // 🔁 your video path
+            controls
+            playsInline
+            className="absolute inset-0 w-full h-full object-contain"
+          />
+
+          {/* ▶️ Click Overlay */}
+          <div
+            className="absolute inset-0 z-20 flex cursor-pointer flex-col items-center justify-center bg-black/60 backdrop-blur-md transition-opacity hover:bg-black/70"
+            onClick={(e) => {
+              const video = e.currentTarget
+                .previousElementSibling as HTMLVideoElement;
+              video.play();
+              e.currentTarget.classList.add("hidden");
+            }}
+          >
+            <PlayCircle size={72} className="text-accent mb-4 animate-pulse" />
+            <p className="text-xl font-semibold text-white">
+              Tap to Play Demo
+            </p>
+            <p className="text-gray-400 mt-2 text-sm">
+              Mobile walkthrough video
+            </p>
           </div>
-        </section>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Screenshots Placeholder Grid */}
         <section className="px-6 py-24 bg-secondary border-b-2 border-accent/40">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold mb-16 text-center animate-float-up">
-              Interface Screenshots
+              Interface Previews
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-8">
-  {screenshots.map((src, idx) => (
-    <div
-      key={idx}
-      className="relative rounded-lg border-2 border-accent/40 overflow-hidden"
-    >
-      <Image
-        src={src}
-        alt={`Screenshot ${idx + 1}`}
-        width={500}
-        height={300}
-        className="w-full h-64 object-cover"
-      />
-    </div>
-  ))}
-</div>
-
+            <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+              {screenshots.map((src, idx) => (
+                <div
+                  key={idx}
+                  className="rounded-2xl border-2 border-accent/40 bg-black p-4 shadow-lg"
+                >
+                  {/* Phone-like container */}
+                  <div className="relative w-full aspect-[9/16] overflow-hidden rounded-xl bg-black">
+                    <Image
+                      src={src}
+                      alt={`Screenshot ${idx + 1}`}
+                      fill
+                      priority={idx === 0}
+                      className="object-contain"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
+
 
         {/* Status Section */}
         <section className="px-6 py-24 text-center">

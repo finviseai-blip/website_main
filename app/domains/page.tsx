@@ -92,9 +92,8 @@ export default function Domains() {
               return (
                 <div
                   key={domain.title}
-                  className={`rounded-lg border border-border p-8 transition-all hover:border-accent hover:shadow-lg hover:shadow-accent/10 ${
-                    index % 2 === 1 ? 'bg-secondary' : 'bg-background'
-                  }`}
+                  className={`rounded-lg border border-border p-8 transition-all hover:border-accent hover:shadow-lg hover:shadow-accent/10 ${index % 2 === 1 ? 'bg-secondary' : 'bg-background'
+                    }`}
                 >
                   <div className="grid gap-8 md:grid-cols-3">
                     <div className="md:col-span-2">
@@ -138,14 +137,14 @@ export default function Domains() {
             <div className="grid gap-8 md:grid-cols-3">
               {[
                 {
-                  title: 'Deep Expertise',
+                  title: 'Focused Expertise',
                   description:
-                    'Decades of combined experience in fintech, AI, and enterprise software development.',
+                    'Built by a team with hands-on experience in fintech, AI, and modern product development.',
                 },
                 {
-                  title: 'Proven Track Record',
+                  title: 'Early Traction',
                   description:
-                    'Successfully delivered complex solutions for leading financial institutions globally.',
+                    'Actively developing and testing intelligent financial solutions with real-world use cases in mind.',
                 },
                 {
                   title: 'Innovation First',
