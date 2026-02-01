@@ -19,7 +19,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Image
-              src="/logo-finvise.png"
+              src="/newlogo.png"
               alt="Finvise AI Logo"
               width={40}
               height={40}
@@ -127,6 +127,13 @@ export default function Header() {
               onClick={() => setIsOpen(false)}
             >
               Contact
+            </Link>
+            <Link
+              href="/preview"
+              className="text-sm font-medium text-foreground/70 transition-colors hover:text-accent"
+              onClick={() => setIsOpen(false)}
+            >
+              Preview
             </Link>
             <Link
               href="/careers"
