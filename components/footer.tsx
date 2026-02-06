@@ -98,8 +98,8 @@ export default function Footer() {
           <p>© 2026 Finvise AI. All rights reserved.</p>
 
           <div className="flex gap-6 mt-4 sm:mt-0">
-            <a href="#" className="hover:text-accent">Privacy Policy</a>
-            <a href="#" className="hover:text-accent">Terms of Service</a>
+            <a href="/privacy" className="hover:text-accent">Privacy Policy</a>
+            <a href="/terms" className="hover:text-accent">Terms of Service</a>
           </div>
         </div>
       </div>
